@@ -1,0 +1,1 @@
+SELECT description FROM varga_description WHERE vargasid = ? AND langid = ?

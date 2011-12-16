@@ -1,0 +1,1 @@
+SELECT description FROM kuptimor_description WHERE kuptimorsid = ? AND langid = ?
