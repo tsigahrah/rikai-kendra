@@ -6,10 +6,9 @@ import java.util.Set;
 
 import rikai.kendra.Kendra;
 import yarar.graph.YGAbstractGraphHolder;
-import yarar.graph.YGDisplay;
-import yarar.graph.YGDisplay.Layouts;
 import yarar.graph.YGGraph;
 import yarar.graph.YGGraphTypes;
+import yarar.graph.YGVisualisationLayouts;
 import yarar.tietokanta.Feldtyp;
 import yarar.tietokanta.Kysely;
 import yarar.tietokanta.KyselyLadata;
@@ -178,11 +177,11 @@ public class KuptimorVargaLadata extends YGAbstractGraphHolder {
     /*
      * (non-Javadoc)
      * 
-     * @see yarar.graph.YGAbstractGraphHolder#setPreferredLayout()
+     * @see yarar.graph.YGAbstractGraphHolder#setDisplayPreferences()
      */
     @Override
     protected void setDisplayPreferences() {
-	preferredLayout = YGDisplay.Layouts.RADIAL_TREE;
+	preferredLayout = YGVisualisationLayouts.RADIAL_TREE;
     }
 
     /*
@@ -191,7 +190,7 @@ public class KuptimorVargaLadata extends YGAbstractGraphHolder {
      * @see yarar.graph.YGAbstractGraphHolder#getPreferredLayout()
      */
     @Override
-    protected Layouts getPreferredLayout() {
+    protected YGVisualisationLayouts getPreferredLayout() {
 	return preferredLayout;
     }
 }

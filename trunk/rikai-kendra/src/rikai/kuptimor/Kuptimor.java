@@ -1,6 +1,7 @@
 package rikai.kuptimor;
 
 import rikai.kendra.Kendra;
+import yarar.graph.YGVShape;
 import yarar.tietokanta.Feldtyp;
 import yarar.tietokanta.Kysely;
 import yarar.tietokanta.KyselyLadata;
@@ -33,7 +34,7 @@ public abstract class Kuptimor extends AbstractKuptimor {
 	setVarga(varga);
 	setSID(SID);
 	setInternalID(name);
-	setDisplayShape(VShape.RECTANGLE);
+	setDisplayShape(YGVShape.RECTANGLE);
     }
 
     /*

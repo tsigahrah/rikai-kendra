@@ -2,8 +2,8 @@ package rikai.kuptimor;
 
 import java.util.Collection;
 
+import yarar.graph.YGVisualisationLayouts;
 import yarar.graph.YGAbstractGraphHolder;
-import yarar.graph.YGDisplay;
 import yarar.graph.YGGraph;
 import yarar.graph.YGGraphTypes;
 
@@ -42,7 +42,7 @@ public abstract class AbstractRelationshipMap extends YGAbstractGraphHolder {
      */
     @Override
     protected void setDisplayPreferences() {
-	preferredLayout = YGDisplay.Layouts.FR;
+	preferredLayout = YGVisualisationLayouts.FR;
     }
 
 }
