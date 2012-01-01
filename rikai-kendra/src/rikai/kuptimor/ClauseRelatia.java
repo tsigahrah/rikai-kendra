@@ -1,13 +1,12 @@
 package rikai.kuptimor;
 
-import yarar.graph.YGEdge;
 
 /**
  * DOC empty type javadoc
  * 
  * @author Dimo Vanchev
  */
-public class ClauseRelatia extends YGEdge {
+public class ClauseRelatia extends Relatia {
 
     /**
      * Creates a new ClauseRelatia instance.

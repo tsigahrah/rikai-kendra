@@ -25,7 +25,7 @@ public final class Kendra {
      */
     private static Kendra selfInstance;
     /** Parser of application-level settings. */
-    private final ConfigParser cf;
+    private final ConfigParser configParser;
 
     /**
      * Singleton private constructor.
@@ -33,7 +33,7 @@ public final class Kendra {
     private Kendra() {
 	Kendra.selfInstance = this;
 	// loading properties from the the relevant properties file
-	cf = new ConfigParser("config.properties");
+	configParser = new ConfigParser("config.properties");
 	init();
     }
 
@@ -54,7 +54,7 @@ public final class Kendra {
      * @return the found value
      */
     public String getConfigValue(final String key) {
-	return cf.getValue(key);
+	return configParser.getValue(key);
     }
 
     /**
