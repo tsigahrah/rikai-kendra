@@ -7,28 +7,24 @@ import java.util.Set;
 import rikai.kendra.Kendra;
 import yarar.graph.YGAbstractGraphHolder;
 import yarar.graph.YGGraph;
-import yarar.graph.YGGraphTypes;
 import yarar.graph.YGVisualisationLayouts;
 import yarar.tietokanta.Feldtyp;
 import yarar.tietokanta.Kysely;
 import yarar.tietokanta.KyselyLadata;
 
 /**
- * Initiates all semantic categories {@link Varga}. <b>Kuptimor</b> is an <a
- * href="http://en.wikipedia.org/wiki/Albanian_language" target="_blank">Albanian</a> adjective for
- * <i>semantic</i>.<br>
- * <b>Varga</b> is the latin-phonetical spelling of the <a
- * href="http://en.wikipedia.org/wiki/Kannada_language" target="_blank">Kannada</a> word ವರ್ಗ, which
- * means <i>category</i>.<br>
+ * Initiates all semantic categories {@link Varga}.<br>
+ * <b>Ontoleg</b> is an <a href="http://en.wikipedia.org/wiki/Welsh_language"
+ * target="_blank">Welsh</a> word meaning <i>ontology</i>.<br>
  * <b>Ladata</b> is a <a href="http://en.wikipedia.org/wiki/Finnish_language"
  * target="_blank">Finnish</a> verb with meaning <i>load, charge</i>.
  * 
  * @author Dimo Vanchev
  */
-public class KuptimorVargaLadata extends YGAbstractGraphHolder {
+public class OntolegLadata extends YGAbstractGraphHolder {
 
     /** The only instance of this class. */
-    private static KuptimorVargaLadata selfInstance;
+    private static OntolegLadata selfInstance;
 
     /**
      * {@link Enumeration} containing all SIDs from the loaded {@link Varga} objects. These are used
@@ -48,10 +44,10 @@ public class KuptimorVargaLadata extends YGAbstractGraphHolder {
     private final String[] branchesToSkip;
 
     /** Singleton private constructor. */
-    private KuptimorVargaLadata() {
-	KuptimorVargaLadata.selfInstance = this;
-	/* initiates the YGGraph object, which will store the varga-tree */
-	ygg = new YGGraph(YGGraphTypes.FOREST);
+    private OntolegLadata() {
+	OntolegLadata.selfInstance = this;
+	/* initiates the Ontoleg object, which will store the varga-tree */
+	ygg = Ontoleg.getInstance();
 	/* initiating the HashMap that will store all vargas */
 	vargas = new HashMap<Integer, Varga>();
 	/* checks which branches must be skipped */
@@ -66,11 +62,11 @@ public class KuptimorVargaLadata extends YGAbstractGraphHolder {
      * 
      * @return the only instance of this class.
      */
-    public static KuptimorVargaLadata getInstance() {
-	if (KuptimorVargaLadata.selfInstance == null) {
-	    new KuptimorVargaLadata();
+    public static OntolegLadata getInstance() {
+	if (OntolegLadata.selfInstance == null) {
+	    new OntolegLadata();
 	}
-	return KuptimorVargaLadata.selfInstance;
+	return OntolegLadata.selfInstance;
     }
 
     /**
@@ -79,7 +75,7 @@ public class KuptimorVargaLadata extends YGAbstractGraphHolder {
     private void load() {
 	/* the kysely object loading all vargas */
 	final Kysely kysely = KyselyLadata.getInstance()
-		.getKysely("KuptimorVargaLadata.load");
+		.getKysely("OntolegLadata.load");
 	Kendra.getDB().doQuery(kysely);
 	/* iterating over the results */
 	if (kysely.hasResult()) {
@@ -104,7 +100,7 @@ public class KuptimorVargaLadata extends YGAbstractGraphHolder {
 		    if (((vargaSID.intValue() == parentSID.intValue()) || (getVarga(parentSID) != null))
 			    && !isBranchToSkip(vargaSID)) {
 			vargas.put(vargaSID, varga);
-			ygg.addVertex(varga);
+			((Ontoleg) ygg).addFork(varga);
 		    } else {
 			varga = null;
 		    }
@@ -117,8 +113,7 @@ public class KuptimorVargaLadata extends YGAbstractGraphHolder {
 		    final Kuptimor kuptimor = KuptimorFactory.createKuptimor(
 			    (String) kysely.getFieldAs("kclass", Feldtyp.STRING), kuptimorSID,
 			    varga, (String) kysely.getFieldAs("kname", Feldtyp.STRING));
-		    ygg.addVertex(kuptimor);
-		    ygg.addEdge(new VargaKuptimorRelatia(), varga, kuptimor);
+		    ((Ontoleg) ygg).addLeafTo(kuptimor, varga);
 		}
 	    }
 	}
@@ -146,11 +141,7 @@ public class KuptimorVargaLadata extends YGAbstractGraphHolder {
      */
     private void buildVargaTree() {
 	for (final int sid : keys) {
-	    final Varga varga = getVarga(sid);
-	    final Varga parent = varga.getParent();
-	    if ((parent != varga)) {
-		ygg.addEdge(new VargaVargaRelatia(), parent, varga);
-	    }
+	    ((Ontoleg) ygg).addBranch(getVarga(sid));
 	}
     }
 

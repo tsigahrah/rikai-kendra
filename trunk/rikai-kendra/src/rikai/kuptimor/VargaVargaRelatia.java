@@ -21,6 +21,7 @@ public class VargaVargaRelatia extends Relatia {
      */
     public VargaVargaRelatia(final String internalID) {
 	super(internalID);
+	// TODO Auto-generated constructor stub
     }
 
 }

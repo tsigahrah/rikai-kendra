@@ -44,7 +44,7 @@ public abstract class Varga extends AbstractKuptimor {
      * @return parent or self.
      */
     public Varga getParent() {
-	return KuptimorVargaLadata.getInstance().getVarga(parentSID);
+	return OntolegLadata.getInstance().getVarga(parentSID);
     }
 
     /**

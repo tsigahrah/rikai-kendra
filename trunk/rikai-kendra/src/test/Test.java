@@ -1,7 +1,7 @@
 package test;
 
 import rikai.kendra.Kendra;
-import rikai.kuptimor.KuptimorVargaLadata;
+import rikai.kuptimor.OntolegLadata;
 import yarar.rikai.Logger;
 import yarar.tietokanta.Feldtyp;
 import yarar.tietokanta.Kysely;
@@ -29,7 +29,9 @@ public final class Test {
      * Test Graphs.
      */
     private void testGraphs() {
-	final KuptimorVargaLadata kvl = KuptimorVargaLadata.getInstance();
+	// pay attention to the "varga.branches.to.skip" property from config.properties
+	// which instructs OntolegLadata to skip loading specific branches
+	final OntolegLadata kvl = OntolegLadata.getInstance();
 	kvl.displaySelf();
 	// kvl.displayBranch(kvl.getVarga(21));
     }
