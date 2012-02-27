@@ -136,10 +136,10 @@ public final class KuptimorFactory {
     }
 
     /**
-     * Simple implementation of {@link Varga}, used when the class name in the relevant DB
-     * record is not defined, i.e. <code>null</code>.
+     * Simple implementation of {@link Varga}, used when the class name in the relevant DB record is
+     * not defined, i.e. <code>null</code>.
      */
-    private class SimpleVarga extends Varga {
+    private final class SimpleVarga extends Varga {
 	/**
 	 * Creates a new SimpleVarga instance.
 	 * 
@@ -157,7 +157,7 @@ public final class KuptimorFactory {
      * Simple implementation of {@link Kuptimor}, used when the class name in the relevant DB record
      * is not defined, i.e. <code>null</code>.
      */
-    private class SimpleKuptimor extends Kuptimor {
+    private final class SimpleKuptimor extends Kuptimor {
 	/**
 	 * Creates a new SimpleKuptimor instance.
 	 * 
