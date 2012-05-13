@@ -1,4 +1,4 @@
-package rikai.kuptimor;
+package rikai.ontoleg;
 
 import yarar.graph.YGGraph;
 import yarar.graph.YGGraphTypes;
@@ -41,7 +41,7 @@ public class Ontoleg extends YGGraph {
      * @param varga the category to add
      */
     public void addFork(final Varga varga) {
-	addVertex(varga);
+    	addVertex(varga);
     }
 
     /**

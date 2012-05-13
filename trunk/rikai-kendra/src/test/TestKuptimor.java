@@ -2,8 +2,8 @@ package test;
 
 import java.awt.Color;
 
-import rikai.kuptimor.Kuptimor;
-import rikai.kuptimor.Varga;
+import rikai.ontoleg.Kuptimor;
+import rikai.ontoleg.Varga;
 
 @SuppressWarnings({ "javadoc" })
 public class TestKuptimor extends Kuptimor {

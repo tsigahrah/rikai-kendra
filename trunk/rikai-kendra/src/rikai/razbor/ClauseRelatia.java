@@ -1,4 +1,6 @@
-package rikai.kuptimor;
+package rikai.razbor;
+
+import rikai.kendra.Relatia;
 
 
 /**

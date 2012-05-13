@@ -2,7 +2,7 @@ package test;
 
 import java.awt.Color;
 
-import rikai.kuptimor.Varga;
+import rikai.ontoleg.Varga;
 
 @SuppressWarnings({ "javadoc" })
 public class TestVarga extends Varga {

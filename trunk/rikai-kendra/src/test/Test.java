@@ -1,7 +1,11 @@
 package test;
 
+import rikai.grammatiki.Fraza;
 import rikai.kendra.Kendra;
-import rikai.kuptimor.OntolegLadata;
+import rikai.ontoleg.Kuptimor;
+import rikai.ontoleg.KuptimorFactory;
+import rikai.ontoleg.OntolegLadata;
+import rikai.ontoleg.Varga;
 import yarar.rikai.Logger;
 import yarar.tietokanta.Feldtyp;
 import yarar.tietokanta.Kysely;
@@ -23,6 +27,35 @@ public final class Test {
 	Kendra.getInstance();
 	// testDB();
 	testGraphs();
+	testRazbor();
+    }
+    
+    private void testRazbor() {
+	// pay attention to the "varga.branches.to.skip" property from config.properties
+	// which instructs OntolegLadata to skip loading specific branches
+	final OntolegLadata kvl = OntolegLadata.getInstance();
+	Varga sv = KuptimorFactory.createVarga(null, 1, 1, "тестово");
+	// Самотното куче лаеше в затънтеното село.
+	Kuptimor k1 = KuptimorFactory.createKuptimor(null, 1, sv, "самотен");
+	Kuptimor k2 = KuptimorFactory.createKuptimor(null, 2, sv, "куче");
+	Kuptimor k3 = KuptimorFactory.createKuptimor(null, 3, sv, "лай");
+	Kuptimor k4 = KuptimorFactory.createKuptimor(null, 4, sv, "село");
+	Kuptimor k5 = KuptimorFactory.createKuptimor(null, 5, sv, "затънтен");
+	Fraza f1 = new Fraza(k1);
+	Fraza f2 = new Fraza(k2);
+	Fraza f3 = new Fraza(k3);
+	Fraza f4 = new Fraza(k4);
+	Fraza f5 = new Fraza(k5);
+	TestRelationshipMap trmap = new TestRelationshipMap();
+	trmap.addFraza(f1);
+	trmap.addFraza(f2);
+	trmap.addFraza(f3);
+	trmap.addFraza(f4);
+	trmap.addRelatia(new TestRelatia("ОПРЕД"), f1, f2);
+	trmap.addRelatia(new TestRelatia("ДЕЙНО"), f2, f3);
+	trmap.addRelatia(new TestRelatia("ПОЯСН"), f2, f4);
+	trmap.addRelatia(new TestRelatia("ОПРЕД"), f5, f4);
+	trmap.displaySelf();
     }
 
     /**
@@ -33,7 +66,7 @@ public final class Test {
 	// which instructs OntolegLadata to skip loading specific branches
 	final OntolegLadata kvl = OntolegLadata.getInstance();
 	kvl.displaySelf();
-	// kvl.displayBranch(kvl.getVarga(21));
+	// kvl.displayBranch(kvl.getVarga(10));
     }
 
     /**

@@ -1,6 +1,5 @@
 package rikai.grammatiki;
 
-import rikai.kuptimor.Fraza;
 
 /**
  * DOC empty type javadoc
@@ -14,5 +13,6 @@ public abstract class PartOfSentence {
     public Fraza[] getFrazi() {
 	return frazi;
     }
-
+    
+    // TODO missing implementation
 }

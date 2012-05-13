@@ -1,6 +1,7 @@
-package rikai.kuptimor;
+package rikai.razbor;
 
 import java.util.Collection;
+
 
 /**
  * Group of sequential, semantically connected {@link Clause}s. In a typical example a
@@ -18,18 +19,15 @@ import java.util.Collection;
  * 
  * @author Dimo Vanchev
  */
-public class ClausesBlock implements KontextTräger {
+public class ClausesBlock extends AbstractClause {
 
-    private ClausesBlockContext context;
     private Collection<Clause> clauses;
 
     public Collection<Clause> getClauses() {
 	return clauses;
     }
 
-    @Override
-    public final AbstractContext getContext() {
-	return context;
+    public void setKontext(ClausesBlockKontext kontext) {
+	setKontext(kontext, KontextTypes.CLAUSES_BLOCK);
     }
-
 }

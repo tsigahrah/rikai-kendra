@@ -20,6 +20,6 @@ package rikai.grammatiki;
  */
 public abstract class Podlog extends PartOfSentence {
 
-    // public abstract Kuptimor get
+    // TODO missing implementation
 
 }
