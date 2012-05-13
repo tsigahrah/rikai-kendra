@@ -1,6 +1,9 @@
-package rikai.kuptimor;
+package rikai.razbor;
 
 import java.util.Collection;
+
+import rikai.grammatiki.Fraza;
+import rikai.kendra.Relatia;
 
 import yarar.graph.YGVisualisationLayouts;
 import yarar.graph.YGAbstractGraphHolder;
@@ -44,5 +47,11 @@ public abstract class AbstractRelationshipMap extends YGAbstractGraphHolder {
     protected void setDisplayPreferences() {
 	preferredLayout = YGVisualisationLayouts.FR;
     }
+    
+    @Override
+    protected YGVisualisationLayouts getPreferredLayout() {
+	return preferredLayout;
+    }
+
 
 }

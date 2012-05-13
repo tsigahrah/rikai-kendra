@@ -4,7 +4,7 @@
         <javadoc 
         	access="protected" 
         	author="true" 
-        	classpath="D:\EVAKUACIA\MiscProg\eclipse\external_jars\jung2-2_0_1\vecmath-1.3.1.jar;D:\EVAKUACIA\MiscProg\eclipse\external_jars\jung2-2_0_1\stax-api-1.0.1.jar;conf;D:\EVAKUACIA\MiscProg\eclipse\external_jars\jung2-2_0_1\jung-visualization-2.0.1.jar;D:\EVAKUACIA\MiscProg\eclipse\external_jars\jung2-2_0_1\concurrent-1.3.4.jar;sqls;libs/postgresql-9.1-901.jdbc4.jar;../Yarar/bin;D:\EVAKUACIA\MiscProg\eclipse\external_jars\jung2-2_0_1\colt-1.2.0.jar;D:\EVAKUACIA\MiscProg\eclipse\external_jars\jung2-2_0_1\jung-3d-demos-2.0.1.jar;D:\EVAKUACIA\MiscProg\eclipse\external_jars\jung2-2_0_1\jung-jai-2.0.1.jar;D:\EVAKUACIA\MiscProg\eclipse\external_jars\jung2-2_0_1\j3d-core-1.3.1.jar;D:\EVAKUACIA\MiscProg\eclipse\external_jars\jgrapht-jdk1.6.jar;D:\EVAKUACIA\MiscProg\eclipse\external_jars\jung2-2_0_1\jung-3d-2.0.1.jar;D:\EVAKUACIA\MiscProg\eclipse\external_jars\jung2-2_0_1\jung-graph-impl-2.0.1.jar;D:\EVAKUACIA\MiscProg\eclipse\external_jars\jung2-2_0_1\jung-io-2.0.1.jar;D:\EVAKUACIA\MiscProg\eclipse\external_jars\jung2-2_0_1\jung-jai-samples-2.0.1.jar;D:\EVAKUACIA\MiscProg\eclipse\external_jars\jung2-2_0_1\jung-algorithms-2.0.1.jar;D:\EVAKUACIA\MiscProg\eclipse\external_jars\jung2-2_0_1\collections-generic-4.01.jar;D:\EVAKUACIA\MiscProg\eclipse\external_jars\jung2-2_0_1\jung-samples-2.0.1.jar;D:\EVAKUACIA\MiscProg\eclipse\external_jars\jung2-2_0_1\wstx-asl-3.2.6.jar;D:\EVAKUACIA\MiscProg\eclipse\external_jars\jung2-2_0_1\jung-api-2.0.1.jar" 
+        	classpath="C:\eclipse\external_jars\jung2-2_0_1\vecmath-1.3.1.jar;C:\eclipse\external_jars\jung2-2_0_1\stax-api-1.0.1.jar;conf;C:\eclipse\external_jars\jung2-2_0_1\jung-visualization-2.0.1.jar;C:\eclipse\external_jars\jung2-2_0_1\concurrent-1.3.4.jar;sqls;libs/postgresql-9.1-901.jdbc4.jar;../Yarar/bin;C:\eclipse\external_jars\jung2-2_0_1\colt-1.2.0.jar;C:\eclipse\external_jars\jung2-2_0_1\jung-3d-demos-2.0.1.jar;C:\eclipse\external_jars\jung2-2_0_1\jung-jai-2.0.1.jar;C:\eclipse\external_jars\jung2-2_0_1\j3d-core-1.3.1.jar;C:\eclipse\external_jars\jgrapht-jdk1.6.jar;C:\eclipse\external_jars\jung2-2_0_1\jung-3d-2.0.1.jar;C:\eclipse\external_jars\jung2-2_0_1\jung-graph-impl-2.0.1.jar;C:\eclipse\external_jars\jung2-2_0_1\jung-io-2.0.1.jar;C:\eclipse\external_jars\jung2-2_0_1\jung-jai-samples-2.0.1.jar;C:\eclipse\external_jars\jung2-2_0_1\jung-algorithms-2.0.1.jar;C:\eclipse\external_jars\jung2-2_0_1\collections-generic-4.01.jar;C:\eclipse\external_jars\jung2-2_0_1\jung-samples-2.0.1.jar;C:\eclipse\external_jars\jung2-2_0_1\wstx-asl-3.2.6.jar;C:\eclipse\external_jars\jung2-2_0_1\jung-api-2.0.1.jar" 
         	destdir="../javadocs/kendra" 
         	doctitle="Rikai Kendra" 
         	nodeprecated="false" 
@@ -12,7 +12,7 @@
         	noindex="false" 
         	nonavbar="false" 
         	notree="false" 
-        	packagenames="yarar.graph,rikai.kendra,yarar.rikai,yarar.tietokanta,rikai.kuptimor" 
+        	packagenames="yarar.graph,rikai.kendra,yarar.rikai,yarar.tietokanta,rikai.ontoleg,rikai.razbor,rikai.grammatiki" 
         	source="1.7" 
         	sourcepath="src;../Yarar/src" 
         	splitindex="true" 
@@ -20,7 +20,7 @@
         	charset="utf-8" 
         	version="true">
             <link href="http://download.oracle.com/javase/7/docs/api/"/>
-            <link href="file:/D:/EVAKUACIA/workspace-rikai/javadocs/kendra/"/>
+            <link href="file:/C:/Users/dimo.PRP/workspace-rikai/javadocs/kendra/"/>
         </javadoc>
     </target>
 </project>

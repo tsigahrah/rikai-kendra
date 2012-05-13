@@ -1,4 +1,4 @@
-package rikai.kuptimor;
+package rikai.ontoleg;
 
 import java.awt.Color;
 
@@ -59,7 +59,7 @@ public abstract class Varga extends AbstractKuptimor {
     /*
      * (non-Javadoc)
      * 
-     * @see rikai.kuptimor.AbstractKuptimor#getDescription(java.lang.String)
+     * @see rikai.ontoleg.AbstractKuptimor#getDescription(java.lang.String)
      */
     @Override
     public String getDescription(final String langid) {

@@ -1,9 +1,9 @@
-package rikai.kuptimor;
+package rikai.kendra;
 
 import yarar.graph.YGEdge;
 
 /**
- * This abstract class denotes relationship between two objects. <Br
+ * This abstract class denotes relationship between two objects. <Br>
  * DOC provide more details for Relatia.
  * 
  * @author Dimo Vanchev

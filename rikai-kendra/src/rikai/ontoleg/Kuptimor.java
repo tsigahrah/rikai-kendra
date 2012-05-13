@@ -1,4 +1,4 @@
-package rikai.kuptimor;
+package rikai.ontoleg;
 
 import rikai.kendra.Kendra;
 import yarar.graph.YGVShape;
@@ -40,7 +40,7 @@ public abstract class Kuptimor extends AbstractKuptimor {
     /*
      * (non-Javadoc)
      * 
-     * @see rikai.kuptimor.AbstractKuptimor#getDescription(java.lang.String)
+     * @see rikai.ontoleg.AbstractKuptimor#getDescription(java.lang.String)
      */
     @Override
     public String getDescription(final String langid) {
@@ -82,7 +82,7 @@ public abstract class Kuptimor extends AbstractKuptimor {
      * Returns the unique semantic identifier of the related semantic category.
      * 
      * @return The unique semantic identifier.
-     * @see rikai.kuptimor.AbstractKuptimor#getSID()
+     * @see rikai.ontoleg.AbstractKuptimor#getSID()
      */
     public int getVargaSID() {
 	return varga.getSID();

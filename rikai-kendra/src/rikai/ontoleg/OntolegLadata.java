@@ -1,4 +1,4 @@
-package rikai.kuptimor;
+package rikai.ontoleg;
 
 import java.util.Enumeration;
 import java.util.HashMap;

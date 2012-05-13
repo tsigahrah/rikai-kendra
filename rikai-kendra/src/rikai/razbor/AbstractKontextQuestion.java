@@ -1,10 +1,10 @@
-package rikai.kuptimor;
+package rikai.razbor;
 
 /**
  * DOC empty type javadoc
  * 
  * @author Dimo Vanchev
  */
-public abstract class ClausesBlockContext extends AbstractContext {
+public abstract class AbstractKontextQuestion {
     // TODO missing implementation
 }

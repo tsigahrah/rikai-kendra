@@ -19,5 +19,5 @@ package rikai.grammatiki;
  * @see Podlog
  */
 public abstract class Skazuemo extends PartOfSentence {
-
+    // TODO missing implementation
 }

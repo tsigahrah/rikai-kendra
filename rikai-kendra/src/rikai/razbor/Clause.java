@@ -1,8 +1,7 @@
-package rikai.kuptimor;
+package rikai.razbor;
 
 import rikai.grammatiki.Podlog;
 import rikai.grammatiki.Skazuemo;
-import yarar.graph.YGVertex;
 
 /**
  * In grammar, a <b>clause</b> is the smallest grammatical unit that can express a complete
@@ -16,26 +15,29 @@ import yarar.graph.YGVertex;
  * 
  * @author Dimo Vanchev
  */
-public class Clause extends YGVertex implements KontextTräger {
+public class Clause extends AbstractClause {
+    /** The subject */
     private Podlog podlog;
+    /** The predicate */
     private Skazuemo skazuemo;
-    private ClauseContext context;
 
+    /**
+     * Gets the subject of the clause.
+     * @return the subject.
+     */
     public final Podlog getPodlog() {
 	return podlog;
     }
 
+    /** 
+     * Get the predicate of the clause.
+     * @return the predicate.
+     */
     public final Skazuemo getSkazuemo() {
 	return skazuemo;
     }
 
-    /*
-     * (non-Javadoc)
-     * 
-     * @see rikai.kuptimor.KontextTräger#getContext()
-     */
-    @Override
-    public final AbstractContext getContext() {
-	return context;
+    public void setKontext(ClauseKontext kontext) {
+	setKontext(kontext, KontextTypes.CLAUSE);
     }
 }

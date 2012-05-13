@@ -1,4 +1,6 @@
-package rikai.kuptimor;
+package rikai.ontoleg;
+
+import rikai.kendra.Relatia;
 
 /**
  * This edge type denotes relationship between {@link Varga} and {@link Kuptimor} objects.

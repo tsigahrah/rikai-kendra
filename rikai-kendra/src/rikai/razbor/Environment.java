@@ -1,4 +1,4 @@
-package rikai.kuptimor;
+package rikai.razbor;
 
 /**
  * <code>Environment</code> is a over-sentence context level. It's focus is paragraph, i.e. the
@@ -8,17 +8,10 @@ package rikai.kuptimor;
  * 
  * @author Dimo Vanchev
  */
-public class Environment implements KontextTräger {
-    private EnvironmentContext context;
+public class Environment extends AbstractClause {
 
-    /*
-     * (non-Javadoc)
-     * 
-     * @see rikai.kuptimor.KontextTräger#getContext()
-     */
-    @Override
-    public final AbstractContext getContext() {
-	return context;
+    public void setKontext(EnvironmentKontext kontext) {
+	setKontext(kontext, KontextTypes.ENVIRONMENT);
     }
 
 }
