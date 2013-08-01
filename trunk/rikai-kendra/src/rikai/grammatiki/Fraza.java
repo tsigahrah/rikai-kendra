@@ -10,7 +10,7 @@ import yarar.graph.YGVertex;
  */
 public class Fraza extends YGVertex {
     
-    private Kuptimor content;
+    private Kuptimor[] content;
     // members[] part of speech || context modifiers || something even smarter :)
 
 //    /**
@@ -24,17 +24,32 @@ public class Fraza extends YGVertex {
 
     
     // FIXME this is just a dummy implementation for Fraza.content
-    public Fraza(Kuptimor content) {
-	//super("fraza" + content.getSID());
-	super(content.toString());
+    public Fraza(Kuptimor[] content) {
+	super(Fraza.arrayContentToString(content));
 	setContent(content);
     }
     
-    private void setContent(Kuptimor content) {
+    // FIXME this is just a dummy implementation for Fraza.content
+    public Fraza(Kuptimor content) {
+	//super("fraza" + content.getSID());
+	super(content.toString());
+	Kuptimor k[] = {content};
+	setContent(k);
+    }
+    
+    private void setContent(Kuptimor[] content) {
 	this.content = content;
     }
     
-    public Kuptimor getContent() {
+    public Kuptimor[] getContent() {
 	return content;
+    }
+    
+    private static String arrayContentToString(Kuptimor[] content) {
+	String s = "";
+	for (Kuptimor kuptimor : content) {
+	    s += kuptimor.toString() + " ";
+	}
+	return s;
     }
 }
