@@ -25,9 +25,9 @@ public final class Test {
      */
     private Test() {
 	Kendra.getInstance();
-	// testDB();
-	testGraphs();
-	testRazbor();
+	//testDB();
+	testOntolegGraph();
+	//testRazbor();
     }
     
     private void testRazbor() {
@@ -56,17 +56,27 @@ public final class Test {
 	trmap.addRelatia(new TestRelatia("ПОЯСН"), f2, f4);
 	trmap.addRelatia(new TestRelatia("ОПРЕД"), f5, f4);
 	trmap.displaySelf();
+	
+	Fraza f6 = new Fraza(new Kuptimor[]{k1, k2});
+	Fraza f7 = new Fraza(new Kuptimor[]{k5, k4});
+	TestRelationshipMap trmap1 = new TestRelationshipMap();
+	trmap1.addFraza(f3);
+	trmap1.addFraza(f6);
+	trmap1.addFraza(f7);
+	trmap1.addRelatia(new TestRelatia("ДЕЙНО"), f6, f3);
+	trmap1.addRelatia(new TestRelatia("ПОЯСН"), f3, f7);
+	trmap1.displaySelf();
     }
 
     /**
      * Test Graphs.
      */
-    private void testGraphs() {
+    private void testOntolegGraph() {
 	// pay attention to the "varga.branches.to.skip" property from config.properties
 	// which instructs OntolegLadata to skip loading specific branches
-	final OntolegLadata kvl = OntolegLadata.getInstance();
-	kvl.displaySelf();
-	// kvl.displayBranch(kvl.getVarga(10));
+	final OntolegLadata ol = OntolegLadata.getInstance();
+	ol.displaySelf();
+	// ol.displayBranch(ol.getVarga(10));
     }
 
     /**
@@ -74,7 +84,7 @@ public final class Test {
      */
     private void testDB() {
 	// sqlISO();
-	// sqlVargaDescription();
+	 sqlVargaDescription();
 	sqlKuptimorDescription();
     }
 
