@@ -2,7 +2,7 @@ package rikai.razbor;
 
 import yarar.graph.YGVertex;
 
-public abstract class AbstractClause extends YGVertex implements KontextTr√§ger {
+public abstract class AbstractClause extends YGVertex implements KontextTr‰ger {
     
     protected AbstractKontext kontext;
     private KontextTypes kontextType;
