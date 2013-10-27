@@ -1,11 +1,11 @@
-#summary One-sentence summary of this page.
+#summary Kendra is a Telugu word కేంద్ర, which means "central".
 
 = Introduction =
 
 That's the central component of the *Rikai project*.
 
 
-*Rikai* is the latin-phonetical spelling of the Japanese word 理解 meaning _understand_.
+*Rikai* is the Japanese word 理解 meaning _understand_.
 
 = Values =
 
