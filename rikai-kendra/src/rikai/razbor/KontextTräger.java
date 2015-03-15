@@ -5,7 +5,7 @@ package rikai.razbor;
  * 
  * @author Dimo Vanchev
  */
-public interface KontextTr‰ger {
+public interface KontextTr√§ger {
 
     /**
      * Returns the context.
